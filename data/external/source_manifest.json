@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-04-03T08:25:02.574422+00:00",
+  "sources": [
+    {
+      "name": "Amazon Fashion ratings",
+      "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon/categoryFiles/ratings_Amazon_Fashion.csv",
+      "destination": "C:\\Users\\Lee\\Desktop\\xooov\\code10\\data\\external\\amazon_fashion\\ratings_Amazon_Fashion.csv"
+    },
+    {
+      "name": "Amazon Fashion metadata",
+      "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon/categoryFiles/meta_Amazon_Fashion.json.gz",
+      "destination": "C:\\Users\\Lee\\Desktop\\xooov\\code10\\data\\external\\amazon_fashion\\meta_Amazon_Fashion.json.gz"
+    },
+    {
+      "name": "H&M customers sample via dataset viewer",
+      "url": "https://huggingface.co/datasets/dinhlnd1610/HM-Personalized-Fashion-Recommendations",
+      "destination": "C:\\Users\\Lee\\Desktop\\xooov\\code10\\data\\external\\hm_sample\\customers_sample.csv"
+    },
+    {
+      "name": "H&M articles sample via dataset viewer",
+      "url": "https://huggingface.co/datasets/dinhlnd1610/HM-Personalized-Fashion-Recommendations",
+      "destination": "C:\\Users\\Lee\\Desktop\\xooov\\code10\\data\\external\\hm_sample\\articles_sample.csv"
+    },
+    {
+      "name": "H&M transactions sample via dataset viewer",
+      "url": "https://huggingface.co/datasets/dinhlnd1610/HM-Personalized-Fashion-Recommendations",
+      "destination": "C:\\Users\\Lee\\Desktop\\xooov\\code10\\data\\external\\hm_sample\\transactions_sample.csv"
+    }
+  ]
+}

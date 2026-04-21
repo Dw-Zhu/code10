@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>电商用户画像与推荐实验报告</title>
+  <style>
+    body { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; margin: 32px; color: #222; background: #f7f8fb; }
+    h1, h2 { color: #0f2741; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(280px, 1fr)); gap: 18px; }
+    .card { background: white; border-radius: 14px; padding: 18px 20px; box-shadow: 0 8px 28px rgba(15,39,65,0.08); }
+    table { border-collapse: collapse; width: 100%; background: white; }
+    th, td { border: 1px solid #dfe6ee; padding: 8px 10px; font-size: 14px; }
+    th { background: #edf3f9; }
+    .muted { color: #5b6777; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>电商用户画像与个性化推荐实验报告</h1>
+  <p class="muted">生成时间：2026-04-05 16:18:25</p>
+  <div class="grid">
+    <div class="card">
+      <h2>数据概况</h2>
+      <table><tr><td>样本行数</td><td>35173.0000</td></tr><tr><td>字段数</td><td>32.0000</td></tr><tr><td>用户数</td><td>34491.0000</td></tr><tr><td>商品数</td><td>6331.0000</td></tr><tr><td>正样本占比</td><td>0.5711</td></tr><tr><td>平均价格</td><td>28.6297</td></tr><tr><td>平均购买频次</td><td>1.0480</td></tr></table>
+    </div>
+    <div class="card">
+      <h2>自动标注效果</h2>
+      <table><tr><td>最佳聚类数</td><td>4.0000</td></tr><tr><td>自动标注准确率</td><td>0.9984</td></tr><tr><td>自动标注宏平均 F1</td><td>0.9979</td></tr></table>
+    </div>
+    <div class="card">
+      <h2>传统基线</h2>
+      <table><tr><td>准确率</td><td>0.7026</td></tr><tr><td>精确率</td><td>0.9888</td></tr><tr><td>召回率</td><td>0.4848</td></tr><tr><td>F1 值</td><td>0.6506</td></tr></table>
+    </div>
+    <div class="card">
+      <h2>随机森林优化</h2>
+      <table><tr><td>准确率</td><td>0.8488</td></tr><tr><td>精确率</td><td>0.9993</td></tr><tr><td>召回率</td><td>0.7357</td></tr><tr><td>F1 值</td><td>0.8475</td></tr></table>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 18px;">
+    <h2>推荐示例</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>用户编号</th>
+      <th>商品编号</th>
+      <th>商品类别</th>
+      <th>价格</th>
+      <th>基线得分</th>
+      <th>优化得分</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A2VF9VXXYYH2TY</td>
+      <td>B00B2ED2J4</td>
+      <td>服饰</td>
+      <td>64.98</td>
+      <td>0.8680</td>
+      <td>0.8801</td>
+    </tr>
+    <tr>
+      <td>A2VF9VXXYYH2TY</td>
+      <td>B00ETILZUI</td>
+      <td>鞋靴</td>
+      <td>34.95</td>
+      <td>0.8670</td>
+      <td>0.8795</td>
+    </tr>
+    <tr>
+      <td>A2VF9VXXYYH2TY</td>
+      <td>B004MO5UH8</td>
+      <td>服饰</td>
+      <td>39.95</td>
+      <td>0.8020</td>
+      <td>0.8786</td>
+    </tr>
+    <tr>
+      <td>A2VF9VXXYYH2TY</td>
+      <td>B00AKIWXDE</td>
+      <td>鞋靴</td>
+      <td>29.95</td>
+      <td>0.8670</td>
+      <td>0.8783</td>
+    </tr>
+    <tr>
+      <td>A2VF9VXXYYH2TY</td>
+      <td>B00CSYU59C</td>
+      <td>服饰</td>
+      <td>14.95</td>
+      <td>0.8014</td>
+      <td>0.8766</td>
+    </tr>
+    <tr>
+      <td>A2ZVETF78CVNO2</td>
+      <td>B00009IM5J</td>
+      <td>其他</td>
+      <td>47.37</td>
+      <td>0.9207</td>
+      <td>0.8384</td>
+    </tr>
+    <tr>
+      <td>A2ZVETF78CVNO2</td>
+      <td>B00ETILZUI</td>
+      <td>鞋靴</td>
+      <td>34.95</td>
+      <td>1.0000</td>
+      <td>0.8383</td>
+    </tr>
+    <tr>
+      <td>A2ZVETF78CVNO2</td>
+      <td>B00AKIWXDE</td>
+      <td>鞋靴</td>
+      <td>29.95</td>
+      <td>1.0000</td>
+      <td>0.8371</td>
+    </tr>
+    <tr>
+      <td>A2ZVETF78CVNO2</td>
+      <td>B004MO5UH8</td>
+      <td>服饰</td>
+      <td>39.95</td>
+      <td>0.9344</td>
+      <td>0.8368</td>
+    </tr>
+    <tr>
+      <td>A2ZVETF78CVNO2</td>
+      <td>B00ACX1VSU</td>
+      <td>鞋靴</td>
+      <td>29.00</td>
+      <td>0.8727</td>
+      <td>0.8356</td>
+    </tr>
+    <tr>
+      <td>A3UMT16EONLHSF</td>
+      <td>B00009IM5J</td>
+      <td>其他</td>
+      <td>47.37</td>
+      <td>0.9224</td>
+      <td>0.8508</td>
+    </tr>
+    <tr>
+      <td>A3UMT16EONLHSF</td>
+      <td>B00B2ED2J4</td>
+      <td>服饰</td>
+      <td>64.98</td>
+      <td>0.8674</td>
+      <td>0.8500</td>
+    </tr>
+    <tr>
+      <td>A3UMT16EONLHSF</td>
+      <td>B004MO5UH8</td>
+      <td>服饰</td>
+      <td>39.95</td>
+      <td>0.9327</td>
+      <td>0.8500</td>
+    </tr>
+    <tr>
+      <td>A3UMT16EONLHSF</td>
+      <td>B00ETILZUI</td>
+      <td>鞋靴</td>
+      <td>34.95</td>
+      <td>0.9353</td>
+      <td>0.8481</td>
+    </tr>
+    <tr>
+      <td>A3UMT16EONLHSF</td>
+      <td>B00AKIWXDE</td>
+      <td>鞋靴</td>
+      <td>29.95</td>
+      <td>0.9353</td>
+      <td>0.8465</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</body>
+</html>
